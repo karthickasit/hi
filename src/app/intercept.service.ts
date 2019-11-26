@@ -1,0 +1,19 @@
+import { Injectable } from '@angular/core';
+import { HttpInterceptor, HttpRequest, HttpHandler } from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class InterceptService implements HttpInterceptor{
+intercept(req:HttpRequest<any>,next:HttpHandler)
+{
+let tk=req.clone({
+  setHeaders:{
+    tokn:'Bearer123'
+  }
+})
+
+  return next.handle(tk);
+}
+  constructor() { }
+}

@@ -1,0 +1,13 @@
+<p>toys works!</p>
+<section class="row">
+    
+<div *ngFor="let det of details" class="col-4">
+    <a [routerLink]="['/details',det.id]">
+<p>{{det.id}}</p>
+<p>{{det.title}}</p>
+<img src="{{det.thumbnailUrl}}" width="30px">
+</a>
+</div>
+
+</section>
+<a routerLink="">user 1</a>

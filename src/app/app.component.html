@@ -1,0 +1,441 @@
+
+
+
+
+<main class="container">
+    <nav class="row">
+        <div class="col-12 bg-warning">
+            
+
+<!-- <a routerLink="/home">HOME</a>
+<a routerLink="/user">USER</a>
+<a routerLink="/terms">Terms&policies</a>
+<a routerLink="/hr">HR</a> -->
+</div>
+</nav>
+
+
+<div class="row">
+
+
+<article class="col-12 bg-secondary"><router-outlet></router-outlet> </article>
+</div>
+
+
+
+
+
+
+<footer>copyrights@angular.com2019
+       
+            
+
+</footer>
+</main>
+<!-- <button (click)="deletemeth()">delete </button> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- {{temp}}
+
+<a routerLink="/">home</a>
+
+<a routerLink="/user" >USER</a>
+
+
+<div class="bg-success">
+
+<router-outlet></router-outlet>
+</div>
+
+
+
+
+
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h1>{{months1|slice:3:8}}</h1>
+<h1>{{today|date:'EEEE'}}</h1>
+<h1>{{today|date:'MMM'}}</h1>
+<h1>{{4543|currency}}</h1>
+<h1>{{4543|currency:'&#8377;'}}</h1>
+<input [(ngModel)]="num">
+<br>
+{{num|cube|number:'3.2-3'}}
+<input [(ngModel)]="nameuser">    
+user is typing {{nameuser|uppercase}}
+<h1>{{title|slice:3:5}}</h1>
+<h1>{{456.3856375|number:'4.3-4'}}</h1>
+
+<h1>{{emp|json}}</h1>
+
+<h1></h1>
+<h1></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h1>{{title|uppercase}}</h1>
+<h1>{{today|date:'EEEE'}}</h1>
+<h1>{{35.435345|number:'3.3-4'}}</h1>
+<h1>{{35.435345|currency:'&#8377;'}}</h1>
+<h1 *ngFor="let m of months1">{{m|slice:3:5}}</h1>
+<input type="checkbox" [(ngModel)]="check" name="ch">show
+{{check}}
+<form *ngIf="check">
+    enter name
+    <input type="text" [(ngModel)]="nm" name="n"><br>
+    enter mail
+    <input type="text"><br>
+    enter gpa
+    <input type="text" [(ngModel)]="ag" name="a"><br>
+    {{nm|uppercase}}
+{{ag|percent}}
+
+</form>
+<p >this is p</p>
+<h2 >this is h2</h2> -->
+
+     
+
+
+
+<!-- <div class="container">
+        <h1>Task second day</h1>
+
+    <div class="row">
+       
+    </div>
+    <br><br>    
+    <div class="row">
+        <button class="btn btn-primary" (click)="btntxt=(btntxt=='Hide')? 'Show':'Hide'; status=!status; " >{{btntxt}}</button>
+
+    </div>
+    <br><br>
+    <div class="row" *ngIf="status">
+        <h4>Lorem</h4> <img class="col-md-4" src="../assets/images/images1.jpg" alt="">
+
+    </div>
+    <div class="row" [hidden]="status">
+            <h4>vinay</h4> 
+            <img class="col-md-4" src="../assets/images/images3.jpg" alt="">
+            </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+ <h2 *ngFor="let item of marks" [ngClass]="{'pass':item>=50,'fail':item<49}">
+   {{item}}
+ </h2>
+ 
+<div id="table1" class="container ">
+
+<table class="table  table-striped table-hover ">
+    <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Technology</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of emp" [ngClass]="{'bg-primary':(item.city=='hyderabad'),'bg-success':(item.city=='warangal')}">
+            <td scope="row"><a href="#"> {{item.id}}</a></td>
+            <td>{{item.name}} </td>
+            <td>{{item.design}}</td>
+            <td>{{item.tech}}</td>
+            <td>{{item.city}}</td>
+        </tr>       
+    </tbody>
+</table>
+</div>
+
+<div class="container">
+        <table class="table  table-striped table-hover ">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Technology</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of emp" [ngStyle]="{'background-color': (item.city=='hyderabad')? 'green': 'red',
+                                                                'color': (item.city=='hyderabad')? 'white': 'yellow'}">
+                        <td scope="row"><a href="#"> {{item.id}}</a></td>
+                        <td>{{item.name}} </td>
+                        <td>{{item.design}}</td>
+                        <td>{{item.tech}}</td>
+                        <td>{{item.city}}</td>
+                        
+                    </tr>
+                   
+                </tbody>
+            </table>
+            
+</div>
+
+
+
+<div class="jumbotron">
+        <h3 *ngFor="let col of colors">{{col}}</h3>
+
+    <h1 class="display-3">{{4>6}} <br>     
+        {{45>2}}
+{{"this is my chance to give you a surprise"+ vinay}} <br>
+{{num1}}    <br> {{num2}}
+   </h1>
+   <h2 bind-innerHTML="txt1"></h2>
+   <button (click)="opt(55,67)" class="btn btn-success">send values</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+
+
+
+
+
+
+
+<h1>{{name}}</h1>
+<br>
+<h1>{{addme()}} </h1>
+<div class="container">
+    <ol>
+        <li bind-style.background-color="'red'">{{days[0]}} </li>
+        <li>{{days[1]}} </li>
+        <li>{{days[2]}} </li>
+        <li>{{days[3]}} </li>
+        <li>{{days[4]}} </li>
+        <li>{{days[5]}} </li>
+        <li>{{days[6]}} </li>
+    </ol>
+</div>
+
+<div class="container" >
+
+    <img [src]="url1" alt="" width="300" height="300">
+    <button class="btn btn-default btn-success" (click)="changeimg()">change image</button>
+
+</div>
+<div class="container" [style.background-color]="'blue'">
+    
+    <div class="form-group">
+      <label for=""  [style.background-color]="'yellow'">Your </label>
+      <input type="text" class="form-control" name="" id="num1" aria-describedby="helpId" placeholder="enter value">
+      <input type="text" class="form-control" name="" id="num2" aria-describedby="helpId" placeholder="enter value">
+      <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+    <h1 > {{showresult()}} </h1>
+    <button class="btn btn-default btn-success" (click)="showresult()">Add values</button>
+</div>
+
+<div class="container">
+    {{ (months[0]+months[1]+months[2]+months[3]+months[4]+months[5]+months[11]+months[6]+months[7]+months[8]+months[9]+months[10])/12}}
+    {{months/12}}
+</div>
+<h1>{{avgme()}} </h1>
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <a [routerLink]="[ '/register' ]" routerLinkActive="active">Register</a>
+        </div>
+        <div class="col-md-6">
+            <a [routerLink]="[ '/grid' ]" routerLinkActive="active">Grid</a>
+        </div>
+        
+    </div>
+    <div>
+
+    </div>                                                                                                                                                                                      
+    <h1 class="bg-gradient-primary">This is my first angular app</h1>
+    <div class="theme">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, vero? Hic perferendis ipsum ex accusamus totam officia quo alias iusto voluptates nam? Architecto dolorum eius, maiores saepe voluptas voluptatem eos.</p>
+    </div>
+    <router-outlet></router-outlet>
+
+    <h3 id="myid">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dignissimos odio laudantium saepe quidem alias possimus sapiente maxime distinctio aliquam, omnis veritatis laborum necessitatibus impedit eum neque eligendi. Totam, facilis?</h3>
+    <h4 class="text-info bg-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa accusamus quam eos molestias, incidunt animi mollitia cum, explicabo est quia beatae similique laboriosam ea, assumenda expedita recusandae quis libero aliquam.</h4>
+    <!-- <router-outlet></router-outlet> 
+
+    <ul class="list-group">
+        <li class="list-group-item">lorem</li>
+        <li class="list-group-item">vinay</li>
+        <li class="list-group-item">jashlkf 234</li>
+        <li class="list-group-item">jashlkf 234</li>
+        <li class="list-group-item">jashlkf 234</li>
+    </ul>
+    <ol class="list-group" type="1" start="5">
+        <li class="list-group-item">asdlf qr</li>
+        <li class="list-group-item">asdlf 4ai</li>
+        <li class="list-group-item">asdlf asf</li>
+        <li class="list-group-item">asdlf afsd</li>
+        <li class="list-group-item">asdlf sdfgd</li>
+        <li class="list-group-item">sdfhaskf</li>
+    </ol>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Name</th>
+                <th scope="col">source</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">1</td>
+                <td>vinay</td>
+                <td>canada</td>
+            </tr>
+            <tr>
+                <td scope="row">2</td>
+                <td>Prashanth</td>
+                <td>usa</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="../assets/images/images1.jpg" class="rounded-lg  img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        </div>
+        <div class="col-md-4">
+            <img src="../assets/images/images2.jpg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        </div>
+        <div class="col-md-4  ">
+            <img src="../assets/images/images3.jpg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-4 border border-primary">
+            <img src="../assets/images/images5.jpg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        </div>
+        <div class="col-md-4 border border-primary">
+            <img src="../assets/images/images4.jpg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        </div>
+        <div class="col-md-4 border border-primary">
+            <img src="../assets/images/images2.jpg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        </div>
+
+    </div>
+
+</div>
+<div class="container">
+    <div class="row border border-primary">
+        <div class="col border border-primary">Column</div>
+        <div class="col border border-primary">Column</div>
+        <div class="w-100"></div>
+        <div class="col border border-primary">Column</div>
+        <div class="col border border-primary">Column</div>
+    </div>
+</div> --> -->

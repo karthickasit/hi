@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+.pass{
+    background-color: chartreuse;
+}
+.fail{
+    background-color: red;
+}
